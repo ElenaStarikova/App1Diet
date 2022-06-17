@@ -1,0 +1,96 @@
+.text-h1 {
+    font-family: Roboto;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 29px;
+    letter-spacing: 0em;
+    text-align: center;
+    color: #6F6CF5;
+    margin-top: 146px;
+}
+
+.text-h3 {
+    margin-top: 180px;
+    font-family: Roboto;
+    font-size: 28px;
+    font-weight: 400;
+    line-height: 29px;
+    letter-spacing: 0em;
+    text-align: center;
+    color: #6F6CF5;    
+}
+
+.button {
+    height: 80px;
+    width: 248px;
+    left: 56px;
+    top: 440px;
+    border-radius: 15px;
+    border-color: #6F6CF5;
+    background: #FFFCFC;
+    margin-top: 400px;
+    display: block;
+    margin: 100px auto 0 auto;
+
+    font-weight: normal;
+    font-size: 18px;
+
+    text-align: center;
+    text-transform: uppercase;
+
+    color: #6F6CF5;
+}
+
+
+.p-text {
+    margin-top: 146px;
+    font-family: Roboto;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 29px;
+    letter-spacing: 0em;
+    text-align: center;
+    color: #6F6CF5
+}
+
+.button1 {
+    height: 43px;
+    width: 234px;
+    left: 63px;
+    top: 360px;
+    border-radius: 15px;
+    border-color: #6F6CF5;
+    background: #FFFCFC;
+    display: block;
+    margin: 100px auto 0 auto;
+
+    font-weight: normal;
+    font-size: 12px;
+
+    text-align: center;
+    text-transform: uppercase;
+
+    color: #6F6CF5;
+}
+
+.p-greatings {
+    margin-top: 246px;
+    font-family: Roboto;
+    font-size: 34px;
+    font-weight: 400;
+    line-height: 29px;
+    letter-spacing: 0em;
+    text-align: center;
+    color: #6F6CF5
+}
+
+.p-sport {
+    margin-top: 146px;
+    font-family: Roboto;
+    font-size: 28px;
+    font-weight: 400;
+    line-height: 29px;
+    letter-spacing: 0em;
+    text-align: center;
+    color: #6F6CF5
+}
