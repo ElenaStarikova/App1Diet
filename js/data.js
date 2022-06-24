@@ -322,7 +322,40 @@ let questions = [
             }
         ]
     },
-    
+    {
+        text: "После душа и зарядки ждет меня горячий… ", 
+        answers: [
+            {
+                text: "Завтрак", 
+                isCorrect: true
+            },
+            {
+                text: "Обед", 
+                isCorrect: false
+            },
+            {
+                text: "Ужин ", 
+                isCorrect: false
+            }
+        ]
+    },
+    {
+        text: "Режим, конечно, не нарушу – я моюсь под холодным… ", 
+        answers: [
+            {
+                text: "Душем", 
+                isCorrect: true
+            },
+            {
+                text: "Ветром", 
+                isCorrect: false
+            },
+            {
+                text: "Светом", 
+                isCorrect: false
+            }
+        ]
+    },
 ]
 
 let sportFacts = [
