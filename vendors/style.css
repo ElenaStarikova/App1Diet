@@ -10,7 +10,7 @@
 }
 
 .text-h3 {
-    margin-top: 180px;
+    margin-top: 140px;
     font-family: Roboto;
     font-size: 28px;
     font-weight: 400;
@@ -93,4 +93,51 @@
     letter-spacing: 0em;
     text-align: center;
     color: #6F6CF5
+}
+
+.button2 {
+    height: 80px;
+    width: 248px;
+    left: 56px;
+    top: 440px;
+    border-radius: 15px;
+    border-color: #6F6CF5;
+    background: #FFFCFC;
+    margin-top: 420px;
+    display: block;
+    margin: 100px auto 0 auto;
+
+    font-weight: normal;
+    font-size: 18px;
+
+    text-align: center;
+    text-transform: uppercase;
+
+    color: #6F6CF5;
+}
+
+.button2--disabled{
+    border-color: #080808;
+    color: #080808;
+}
+
+.timer {
+    height: 60px;
+    width: 248px;
+    left: 56px;
+    top: 440px;
+    border-radius: 15px;
+    border-color: #6F6CF5;
+    background: #FFFCFC;
+    margin-top: 400px;
+    display: block;
+    margin: 100px auto 0 auto;
+
+    font-weight: normal;
+    font-size: 28px;
+
+    text-align: center;
+    text-transform: uppercase;
+
+    color: #6F6CF5;
 }

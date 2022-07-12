@@ -37,7 +37,7 @@ if (!("questionCount" in localStorage)) { //есть ли в локалстор�
 
 
 openPage()
-// nextDay()
+
 
 //заголовок, текст, кнопка
 function nextDay() {
@@ -150,52 +150,71 @@ function dayChange (diet) {
     p.classList.add("text-h3")
     p.innerHTML = diet.text
 
-    // let div = document.createElement("div")
-    // document.body.appendChild(div) 
-    // div.classList.add()
+    let div = document.createElement("div")
+    document.body.appendChild(div) 
+    div.classList.add("timer")
     
     
 
     let button5 = document.createElement("button")
     document.body.appendChild(button5)
-    button5.classList.add("button")
+    button5.classList.add("button2")
+    button5.classList.add("button2--disabled")
     // button.innerHTML.classList.add("button-text")
     button5.innerHTML = "Далее"
 
-    // переход на экран номер дня с кнопкой Далее
-    button5.addEventListener("click", onButton)
+   
 
-//     // Таймер
-//     let timer = {
-//         elem: div,
-//         dateStart: Date.now(),
-//         duration: 5000,
-//         hourLeft () {
-//             return this.minuteLeft() / 60
-//         },
-//         minuteLeft () {
-//             return this.secundLeft() / 60
-//         },
-//         secundLeft () {
-//             return this.milisecLeft() / 1000
-//         } ,
-//         milisecGone () {
-//             return Date.now() - this.dateStart //этот объект
-//         },
-//         milisecLeft () {
-//             return this.duration - this.milisecGone
-//         },
-//         start () {
+    // Таймер
 
-//         },
-//         onEnd () {
+    let timer = {
+        elem: div,
+        dateStart: localStorage.dayChangeDate,
+        duration: 5000,
+        hourLeft () {
+            return Math.floor(this.minuteLeft() / 60) 
+            //  милисек = 1000 умножить на 60 секунд умножить на 60 
+        },
+        minuteLeft () {
+            return Math.floor(this.secundLeft() / 60)
+        },
+        secundLeft () {
+            return Math.floor(this.milisecLeft() / 1000)
+        },
+        milisecGone () {
+            return Date.now() - this.dateStart //этот объект
+        },
+        milisecLeft () {
+            return this.duration - this.milisecGone()
+        },
+        timeString () {
+            return Math.max(this.hourLeft(), 0) + ":" + Math.max(this.minuteLeft(), 0) + ":" + Math.max(this.secundLeft(), 0)
+        },
+        start () {
+            let self = this
+            let intervalId = setInterval(timeShow, 1000)
+            timeShow()
+            
+            function timeShow() {
+                self.elem.innerHTML = self.timeString()
+                if (self.milisecLeft() > 0) {
+                    
+                }
+                else {
+                    clearInterval(intervalId)
+                    self.onEnd()
+                }
+            }
+        },
+        onEnd () {
+            button5.classList.remove("button2--disabled")
+            // переход на экран номер дня с кнопкой Далее
+             button5.addEventListener("click", onButton)
+        }
 
-//         }
+    }
+    timer.start() 
 
-//     }
-//     timer.start() {
-
-//     }
 } 
 // // функция onButton 2 раза в коде - из экрана Похвалы и из экрана Игры
 
@@ -226,12 +245,14 @@ function game () {
     // строка удаляет все что было в body
     document.body.innerHTML = "GAME"
     // !!! на экране появляется  игра
+
+
     let buttonGame = document.createElement("button")
     document.body.appendChild(buttonGame)
     buttonGame.classList.add("button")
     buttonGame.innerHTML = "Далее"
     buttonGame.addEventListener("click", function () {
-        localStorage.dayChangeDate = Date.now() //количество милисек которое прошло с 1 января 1970
+        localStorage.dayChangeDate = Date.now() //количество милисек которое прошло с 1 января 1970, меняем свойство объекта localStorage в глобальной области, поэтому к ней можно обращаться из любой области
         location.hash = "#dayChange"
 })
 }
@@ -241,15 +262,11 @@ function onButton () {
         //вывод последнего экрана в зависимости от номера вопроса
         // если не последний день
     if (parseFloat(localStorage.questionCount) < questions.length - 1) {
-        if (Date.now() - localStorage.dayChangeDate > 5000) {
+        // if (Date.now() - localStorage.dayChangeDate > 5000) { -эта проверка уже не нужна тк кнопка не активна, когда активна всегда будет true
            localStorage.questionCount++  
            location.hash = "#nextDay"               
-        }  
-        else {
-            delay()
-            //location.hash = "#dayChange"
-        }
-    }        
+        
+    }
     else {
         location.hash = "#finish"
     }
