@@ -1,119 +1,188 @@
+
+
+.parent{
+    height: 600px;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    --app-text: #a81817;
+}
+
 .text-h1 {
+    grid-area: 2/3/3/4;
     font-family: Roboto;
-    font-size: 24px;
+    font-size: 2rem;
     font-weight: 400;
-    line-height: 29px;
+    /* place-self: center; */
+    /* line-height: 29px; */
     letter-spacing: 0em;
     text-align: center;
-    color: #6F6CF5;
-    margin-top: 146px;
+    color: var(--app-text);
+    /* margin-top: 146px; */
 }
 
 .text-h3 {
-    margin-top: 140px;
+    grid-area: 3/3/4/4;
+    place-self: center;
+    /* margin-top: 140px; */
     font-family: Roboto;
-    font-size: 28px;
+    font-size: 2rem;
     font-weight: 400;
-    line-height: 29px;
+    /* line-height: 29px; */
     letter-spacing: 0em;
     text-align: center;
-    color: #6F6CF5;    
+    color: var(--app-text);
 }
 
 .button {
-    height: 80px;
-    width: 248px;
-    left: 56px;
-    top: 440px;
+    grid-area: 6/3/7/4; 
+    place-self: center;
     border-radius: 15px;
-    border-color: #6F6CF5;
+    border-color: var(--app-text);
     background: #FFFCFC;
-    margin-top: 400px;
-    display: block;
-    margin: 100px auto 0 auto;
-
     font-weight: normal;
-    font-size: 18px;
-
-    text-align: center;
+    font-size: 2rem;
     text-transform: uppercase;
-
-    color: #6F6CF5;
+    color: var(--app-text);
 }
 
-
-.p-text {
-    margin-top: 146px;
+.text-h2{
+    grid-area: 1/3/2/4;
+    place-self: center;
+    padding-top: 20px;
+    /* margin-top: 140px; */
     font-family: Roboto;
-    font-size: 24px;
-    font-weight: 400;
-    line-height: 29px;
+    font-size: 1rem;
+    /* font-weight: 400; */
+    /* line-height: 29px; */
     letter-spacing: 0em;
     text-align: center;
-    color: #6F6CF5
+    color: var(--app-text);
+}
+
+.p-text {
+    /* margin-top: 146px; */
+    grid-area: 2/2/4/5;
+    place-self: center;
+    padding-top: 10px;
+    font-family: Roboto;
+    font-size: 1rem;
+    font-weight: 400;
+    /* line-height: 29px; */
+    letter-spacing: 0em;
+    text-align: center;
+    color: var(--app-text);
+}
+.p-questions{
+    grid-area: 1/2/3/5;
+    place-self: center;
+    padding-top: 10px;
+    font-family: Roboto;
+    font-size: 2rem;
+    font-weight: 400;
+    /* line-height: 29px; */
+    letter-spacing: 0em;
+    text-align: center;
+    color: var(--app-text);
 }
 
 .button1 {
-    height: 43px;
+    grid-area: 3/2/4/5;
+    place-self: center;
     width: 234px;
-    left: 63px;
-    top: 360px;
+    /* left: 63px;
+    top: 360px; */
     border-radius: 15px;
-    border-color: #6F6CF5;
+    border-color: var(--app-text);
     background: #FFFCFC;
     display: block;
-    margin: 100px auto 0 auto;
+    /* margin: 100px auto 0 auto; */
 
     font-weight: normal;
-    font-size: 12px;
+    font-size: 1rem;
 
     text-align: center;
     text-transform: uppercase;
 
-    color: #6F6CF5;
+    color: var(--app-text);
+}
+.button3{
+    grid-area: 4/2/5/5;
+    place-self: center;
+    width: 234px;
+    /* left: 63px;
+    top: 360px; */
+    border-radius: 15px;
+    border-color: var(--app-text);
+    background: #FFFCFC;
+    display: block;
+    /* margin: 100px auto 0 auto; */
+
+    font-weight: normal;
+    font-size: 1rem;
+
+    text-align: center;
+    text-transform: uppercase;
+
+    color: var(--app-text);
+}
+.button4{
+    grid-area: 5/2/6/5;
+    place-self: center;
+    /* height: 43px; */
+    width: 234px;
+    /* left: 63px;
+    top: 360px; */
+    border-radius: 15px;
+    border-color: var(--app-text);
+    background: #FFFCFC;
+    display: block;
+    /* margin: 100px auto 0 auto; */
+
+    font-weight: normal;
+    font-size: 1rem;
+
+    text-align: center;
+    text-transform: uppercase;
+
+    color: var(--app-text);
 }
 
 .p-greatings {
-    margin-top: 246px;
+    grid-area: 1/2/4/5;
+    place-self:center;
+    /* margin-top: 96px; */
     font-family: Roboto;
-    font-size: 34px;
+    font-size: 3rem;
     font-weight: 400;
-    line-height: 29px;
+    /* line-height: 29px; */
     letter-spacing: 0em;
     text-align: center;
-    color: #6F6CF5
+    color: var(--app-text);
 }
 
 .p-sport {
-    margin-top: 146px;
+    grid-area: 1/2/4/5;
+    place-self:center;
     font-family: Roboto;
-    font-size: 28px;
+    font-size: 2rem;
     font-weight: 400;
     line-height: 29px;
     letter-spacing: 0em;
     text-align: center;
-    color: #6F6CF5
+    color: var(--app-text);
 }
 
 .button2 {
-    height: 80px;
-    width: 248px;
-    left: 56px;
-    top: 440px;
+    grid-area: 6/3/7/4; 
+    place-self: center;
     border-radius: 15px;
-    border-color: #6F6CF5;
+    border-color: var(--app-text);
     background: #FFFCFC;
-    margin-top: 420px;
-    display: block;
-    margin: 100px auto 0 auto;
-
     font-weight: normal;
-    font-size: 18px;
-
-    text-align: center;
+    font-size: 2rem;
     text-transform: uppercase;
-
-    color: #6F6CF5;
+    color: var(--app-text);
 }
 
 .button2--disabled{
@@ -122,22 +191,126 @@
 }
 
 .timer {
+    grid-area: 5/2/6/5;
+    place-self: center;
     height: 60px;
     width: 248px;
-    left: 56px;
-    top: 440px;
+    /* left: 56px;
+    top: 440px; */
     border-radius: 15px;
-    border-color: #6F6CF5;
+    border-color: var(--app-text);
     background: #FFFCFC;
-    margin-top: 400px;
-    display: block;
-    margin: 100px auto 0 auto;
+    /* margin-top: 400px; */
+    /* display: block; */
+    /* margin: 100px auto 0 auto; */
 
     font-weight: normal;
-    font-size: 28px;
+    font-size: 1rem;
 
     text-align: center;
     text-transform: uppercase;
 
-    color: #6F6CF5;
+    color: var(--app-text);
+}
+.pict {
+    grid-area: 4/2/6/5;
+    place-self: center;
+     /* margin-top: 375px; */
+    height: 223px;
+    width: 202px; 
+    background-image: url(minions_PNG22.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.pict_good {
+    grid-area: 4/2/6/5;
+    place-self: center;
+    /* margin-top: 375px; */
+    height: 223px;
+    width: 202px; 
+    background-image: url(minions_PNG24.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.pict_wrong {
+    grid-area: 4/2/6/5;
+    place-self: center;
+    /* margin-top: 375px; */
+    height: 280px;
+    width: 202px; 
+    background-image: url(minions_PNG28.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.sport-pictures{
+    grid-area: 4/2/5/5;
+    place-self: center;
+    height: 223px;
+    width: 350px; 
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+
+@media not screen and (min-width: 1024px){
+    .parent{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(5, 1fr);
+    }
+    
+    .text-h1 {
+        grid-area: 1/2/2/4;
+    }
+    
+    .text-h3 {
+        grid-area: 2/2/3/4;
+    }
+    .text-h2{
+        grid-area: 1/2/2/4;
+    }
+    .p-text{
+        grid-area: 2/2/3/4;
+    }
+    .p-questions {
+        grid-area: 2/2/3/4;
+        font-size: 1rem;
+    }
+
+    .button {
+        grid-area: 5/2/6/4;
+        place-self: center;
+    } 
+    .button2 {
+        grid-area: 5/2/6/4;
+        place-self: center;
+    } 
+    .button1 {
+        grid-area: 3/2/4/4;
+    }   
+    .button3 {
+        grid-area: 4/2/5/4;
+    }   
+    .button4 {
+        grid-area: 5/2/6/4;
+    }  
+    .p-sport{
+        grid-area: 2/2/3/4;
+        font-size: 1rem;
+    }   
+    .timer{
+        grid-area: 5/2/6/4;
+    }
+    .pict {
+        grid-area: 3/2/5/4;
+    }
+    .picture {
+        grid-area: 3/2/5/4;
+    }
 }
